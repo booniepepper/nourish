@@ -1,6 +1,6 @@
 'use strict';
 
-const main = document.getElementsByTagName("main")[0];
+const main = document.getElementsByTagName('main')[0];
 
-main.innerHtml = "soon";
+main.innerHtml = 'soon';
 
