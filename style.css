@@ -1,5 +1,21 @@
 body {
-  background-color: black;
-  color: white;
+  background-color: #000;
+  color: #ccc;
+}
+
+a {
+  color: #999;
+}
+
+footer {
+  font-size: .8em;
+  margin-top: 32px;
+  text-align: center;
+  width: auto;
+}
+
+footer div {
+  display: inline;
+  padding: 8px;
 }
 
