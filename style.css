@@ -7,6 +7,15 @@ a {
   color: #999;
 }
 
+header {
+  margin-bottom: 32px;
+}
+
+main {
+  text-align: center;
+  width: auto;
+}
+
 footer {
   font-size: .8em;
   margin-top: 32px;
