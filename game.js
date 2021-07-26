@@ -56,18 +56,18 @@ const control = {
           after(seconds).do(enable);
         };
 
-        const container = document.createElement('div');
-        container.classList.add('control');
+        const block = domElem('div').with({className: 'control-block'});
+        const control = domElem('section').with({className: 'control'});
 
-        [title, button, value, container].forEach(e =>
+        [title, button, value, control].forEach(e =>
           e.classList.add(className)
         );
 
-        container.appendChild(title);
-        container.appendChild(button);
-        container.appendChild(value);
-
-        main.appendChild(container);
+        control.appendChild(title);
+        control.appendChild(button);
+        control.appendChild(value);
+        block.appendChild(control);
+        main.appendChild(block);
       }
     })
   })
@@ -77,5 +77,6 @@ const control = {
 
 main.textContent = '';
 
-control.withTitle('Fertile Soil').withButton('Find').withBaseDelay(.1);
+control.withTitle('Patch of Fertile Soil').withButton('Scout').withBaseDelay(.1);
+control.withTitle('Seed').withButton('Forage').withBaseDelay(.001);
 

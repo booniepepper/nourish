@@ -1,3 +1,5 @@
+/* Colors and styles */
+
 body {
   background-color: #000;
   color: #ccc;
@@ -6,6 +8,16 @@ body {
 a {
   color: #999;
 }
+
+.control-block {
+  border: 1px solid #333;
+}
+
+.control .title {
+  border-bottom: 1px dashed #333;
+}
+
+/* Layout */
 
 header {
   margin-bottom: 32px;
@@ -26,5 +38,32 @@ footer {
 footer div {
   display: inline;
   padding: 8px;
+}
+
+.control-block {
+  display: inline-block;
+  margin: 1em;
+}
+
+.control {
+  display: grid;
+  grid-template: "title  title"
+                 "button value";
+}
+
+.control * {
+  margin: 1em;
+}
+
+.control .title {
+  grid-area: title;
+}
+
+.control button {
+  grid-area: button;
+}
+
+.control .value {
+  grid-area: value;
 }
 
