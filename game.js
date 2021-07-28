@@ -51,9 +51,20 @@ const control = {
         const enable = () => button.disabled = false;
         button.onclick = () => {
           disable();
-          const n = value.textContent = Number(value.textContent) + 1;
+          
+          let n = Number(value.textContent);
+          if (Number.isNaN(n)) {
+            console.error(`ERROR: Encountered NaN value for ${className}. Resetting to 0`);
+            n = 0;
+          } else {
+            n += 1;
+          }
+
           const seconds = scale(delay).by(1.07).of(n);
-          after(seconds).do(enable);
+          after(seconds).do(() => {
+            value.textContent = n;
+            enable();
+          });
         };
 
         const block = domElem('div').with({className: 'control-block'});
