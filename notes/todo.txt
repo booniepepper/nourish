@@ -1,0 +1,16 @@
+Soon:
+
+* Have a "storage" for all the values
+  * Save it every 15 seconds to local storage
+* Have a single update loop
+  * Have a way to register new events
+  * Events can be of multiple types:
+    * update values
+    * unlock control
+    * adjust function
+
+Later:
+
+* Add an "export" game feature for hard saves
+
+
